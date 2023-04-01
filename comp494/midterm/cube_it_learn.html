@@ -40,18 +40,102 @@ Last Date Modified: March 29, 2023
         nav a.home-link {
           font-size: 24;
         }
+
+        .accordion-content {
+          display: none;
+        }
+
+        .accordion-btn {
+           background-color: #eee;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-btn.active, .accordion-btn:hover {
+          background-color: #ccc;
+        }
+
+        .accordion-btn::after {
+            content: '\02795';
+            font-size: 13px;
+            color: #777;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .accordion-btn.active::after {
+            content: "\2796";
+        }
+
+        .accordion-content {
+            padding: 0 18px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
     </style>
-    
+
+    <script>
+        var items = document.querySelectorAll('.accordion-item');
+
+        items.forEach(function(item) {
+            item.addEventListener('click', function() {
+                if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                } else {
+                items.forEach(function(otherItem) {
+                    otherItem.classList.remove('active');
+                });
+                item.classList.add('active');
+                }
+            });
+        });
+    </script>
   </head>
 
   <body>
     <nav>
-      <a href="#" class="home-link"></a>
+      <p class="home-link"></p>
       <a href="cube_it_history.html" class="home-link">History</a>
       <a href="cube_it_learn.html" class="home-link">Learn from Scratch!</a>
       <a href="cube_it_solve.html" class="home-link">Solve Now!</a>
-      <a href="#" class="home-link"></a>
+      <p class="home-link"></p>
     </nav>
+
+    <div class="accordion">
+        <div>
+            <button class="accordion-btn">Section 1</button>
+            <div class="accordion-content">
+                <div class="card">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="card-body">
+                    <h3>Card Title 1</h3>
+                    <p>Content for card 1 goes here.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button class="accordion-btn">Section 2</button>
+            <div class="accordion-content">
+            <p>Content for section 2 goes here.</p>
+            </div>
+        </div>
+        
+        <div>
+            <button class="accordion-btn">Section 3</button>
+            <div class="accordion-content">
+            <p>Content for section 3 goes here.</p>
+            </div>
+        </div>
+    </div>
+
   </body>
 
 </html>
