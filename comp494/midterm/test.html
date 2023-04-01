@@ -1,12 +1,116 @@
+<!--
+
+Author: Sean Limqueco
+
+Last Date Modified: March 29, 2023
+
+-->
+
 <DOCTYPE! html>
+
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Sean Limqueco Resume</title>
+    <title>Cube It — Home</title>
+
+    <style>
+      /* CSS styles for navigation bar */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(143, 228, 86);
+        overflow: hidden;
+        margin: 0 auto;
+        width: 100%;
+      }
+      
+      nav a {
+        color: #333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      nav a.home-link {
+        font-size: 24;
+      }
+
+      /* CSS styles for carousel */ 
+      .carousel {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: calc(100vh - 56px); /* subtract height of nav bar */
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carousel img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body>
-    
-    <img src="https://i.pinimg.com/564x/ba/ea/1c/baea1c7baf688f7b699a77649124c593.jpg" alt="Power Rangers: Pringles" width="5000" height="10000">
+    <nav>
+      <a href="#" class="home-link" onClick="prevImage()">←</a>
+      <a href="#" class="home-link">History</a>
+      <a href="#" class="home-link">Learn from Scratch!</a>
+      <a href="#" class="home-link">Solve Now!</a>
+      <a href="#" class="home-link" onclick="nextImage()">→</a>
+    </nav>
+
+    <div class="carousel">
+      <img src="https://via.placeholder.com/800x400.png?text=Carousel+Image+1" alt="Carousel Image 1">
+      <img src="https://via.placeholder.com/800x400.png?text=Carousel+Image+2" alt="Carousel Image 2">\
+      <img src="https://via.placeholder.com/800x400.png?text=Carousel+Image+3" alt="Carousel Image 3">
+      <img src="https://via.placeholder.com/800x400.png?text=Carousel+Image+4" alt="Carousel Image 4">
+      <img src="https://via.placeholder.com/800x400.png?text=Carousel+Image+5" alt="Carousel Image 5">
+    </div>
+
+    <script>
+      // JavaScript for carousel
+      const carousel = document.querySelector('.carousel');
+      const images = carousel.getElementsByTagName('img');
+      let currentIndex = 0;
+
+      // show the first image by default
+      images[currentIndex].style.display = 'block';
+
+      // function to show the previous image
+      function prevImage() {
+        images[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        images[currentIndex].style.display = 'block';
+      }
+
+      // function to show the next image
+      function nextImage() {
+        images[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.display = 'block';
+      }
+
+      // function to flip images repeatedly
+      let intervalId = setInterval(nextImage, 5000);
+
+      // stop flipping images when arrow buttons are clicked
+      const carouselBtns = document.querySelectorAll('.carousel-btn');
+      for (let i = 0; i < carouselBtns.length; i++) {
+        carouselBtns[i].addEventListener('click', function() {
+          clearInterval(intervalId);
+        });
+      }
+    </script>
   </body>
+
 </html>
