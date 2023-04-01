@@ -16,6 +16,7 @@ Last Date Modified: March 29, 2023
     <style>
         /* CSS styles for navigation bar */
         nav {
+          position: fixed bottom;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -33,11 +34,15 @@ Last Date Modified: March 29, 2023
         }
         
         nav a:hover {
-          background-color: #ddd;
-          color: black;
+          background-color: #333;
+          color: #8fe456;
         }
   
         nav a.home-link {
+          font-size: 24;
+        }
+
+        nav a.scroll {
           font-size: 24;
         }
     </style>
@@ -46,12 +51,33 @@ Last Date Modified: March 29, 2023
 
   <body>
     <nav>
-        <a href="#" class="home-link" onClick="prevImage()">←</a>
+        <p></p>
         <a href="cube_it_learn.html" class="home-link">Learn from Scratch!</a>
         <a href="cube_it_home.html" class="home-link">Home</a>
         <a href="cube_it_solve.html" class="home-link">Solve Now!</a>
-        <a href="#" class="home-link" onclick="nextImage()">→</a>
+        <p></p>
+    </nav>
+
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="nav-link" href="#scrollspyHeading1">First</a>
+        <a class="nav-link" href="#scrollspyHeading2">Second</a>
+        <a class="nav-link" href="#scrollspyHeading3">Second</a>
+        <a class="nav-link" href="#scrollspyHeading4">Second</a>
+        <a class="nav-link" href="#scrollspyHeading5">Second</a>
       </nav>
+
+    <div data-bs-spy="scroll" data-bs-target="#History" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading1">First heading</h4>
+        <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        <h4 id="scrollspyHeading2">Second heading</h4>
+        <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        <h4 id="scrollspyHeading3">Third heading</h4>
+        <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        <h4 id="scrollspyHeading4">Fourth heading</h4>
+        <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        <h4 id="scrollspyHeading5">Fifth heading</h4>
+        <p>..<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+      </div>
   </body>
 
 </html>
