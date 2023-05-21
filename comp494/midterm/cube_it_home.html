@@ -22,7 +22,6 @@ Base link: seanlimqueco.github.io/comp494/midterm/cube_it_home.html
   <body>
     <nav>
       <a href="#" class="home-link" onClick="prevImage()">←</a>
-      <a href="cube_it_home.html" class="home-link">Home</a>
       <a href="cube_it_learn.html" class="home-link">Learn from Scratch!</a>
       <a href="cube_it_solve.html" class="home-link">Solve Now!</a>
       <a href="cube_it_history.html" class="home-link">History</a>
@@ -30,28 +29,25 @@ Base link: seanlimqueco.github.io/comp494/midterm/cube_it_home.html
     </nav>
 
     <div class="carousel">
-      <img src="CubeIt_images/cube_it_carousel_img1.png" alt="Carousel Image 1" width="560" height="500">
-      <div class="carousel-caption">
-        <h2>This is the heading</h2>
-        <p>This is paragraph</p>
-      </div>
-      <img src="CubeIt_images/cube_it_carousel_img2.jpeg" alt="Carousel Image 2" width="560" height="500">      
-      <img src="CubeIt_images/cube_it_carousel_img3.jpeg" alt="Carousel Image 3" width="560" height="500">
-      <img src="CubeIt_images/cube_it_carousel_img4.jpeg" alt="Carousel Image 4" width="560" height="500">
-      <!-- <div class="carousel-caption">
-        <h2>This is the heading 222222</h2>
-        <p>This is paragraph 2222222</p>
-      </div> -->
+      <img src="CubeIt_images/cube_it_carousel_img1.png" alt="Scrambled 3x3" width="560" height="500">
+      <img src="CubeIt_images/cube_it_carousel_img2.jpeg" alt="Solution Banner" width="560" height="500">      
+      <img src="CubeIt_images/cube_it_carousel_img3.jpeg" alt="Solved 2x2" width="560" height="500">
+      <img src="CubeIt_images/cube_it_carousel_img4.jpeg" alt="Solved Pyramix" width="560" height="500">
     </div>
 
+    
     <script>
-      // JavaScript for carousel
+      // JavaScript for carousel in the body because carosel needs to be initialized
+      // first before it can work.
       const carousel = document.querySelector('.carousel');
       const images = carousel.getElementsByTagName('img');
       let currentIndex = 0;
 
-      // show the first image by default
-      images[currentIndex].style.display = 'block';
+      // only show the first image by default
+      images[0].style.display = 'block';
+      images[1].style.display = 'none';
+      images[2].style.display = 'none';
+      images[3].style.display = 'none';
 
       // function to show the previous image
       function prevImage() {
