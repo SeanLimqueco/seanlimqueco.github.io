@@ -20,6 +20,20 @@ Base code referenced from:
     <link rel="icon" href="/CubeIt_images/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="general_style.css">
 
+    <!-- To allow for text to be added to to the main logo -->
+    <style>
+      .content {
+        display: flex;
+      }
+
+      h1 {
+        background-color: rgb(0, 181, 181);
+        height: 100px;
+        padding-top: 30px;
+        padding-right: 10px;
+      }
+      </style>
+
   </head>
 
   <body>
@@ -30,8 +44,12 @@ Base code referenced from:
       <a href="cube_it_history.html" class="home-link">History</a>
       <a href="#" class="home-link" onclick="nextImage()">&raquo;</a>
     </nav>
-
-    <h1>Cube IT!</h1>
+    
+    <div class="content" style="width: 100%;">
+      <img src="CubeIt_images/CubeIT.JPEG" alt="CubeIT main logo" width="75" height="100">
+      <h1>Cube IT</h1>
+    </div>
+    
 
     <div class="carousel">
       <img src="CubeIt_images/cube_it_carousel_img1.png" alt="Scrambled 3x3" width="560" height="500">
