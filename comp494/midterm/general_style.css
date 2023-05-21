@@ -202,9 +202,9 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgb(243, 243, 140);
     background: url('../assets/background_image.jpg');
-    background-color : black;
+    background-color : rgb(243, 243, 140);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -213,7 +213,7 @@ main{
 .game-quiz-container{
     width: 40rem;
     height: 30rem;
-    background-color: lightgray;
+    background-color: #8fe456;
     display: flex;
     flex-direction: column;
     align-items: center;
