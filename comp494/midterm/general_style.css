@@ -43,13 +43,9 @@ align-items: center;
 }
 
 .carousel img {
-width:  width="560";
-height: height="400";
+width: width="560";
+height: height="500";
 }
-
-/* .item img {
-    width: 100%;
-} */
 
 /********************************* History Page *******************************/
 /* The Modal (background) */
