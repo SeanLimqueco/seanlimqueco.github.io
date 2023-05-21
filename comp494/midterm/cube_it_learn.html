@@ -8,6 +8,9 @@ Base code referenced from:
 > https://www.w3schools.com/html/default.asp
 > https://getbootstrap.com/docs/4.4/components/alerts/
 
+Text taken from:
+> https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/
+
 -->
 
 <DOCTYPE! html>
@@ -36,7 +39,7 @@ Base code referenced from:
 
       // Alert for non-functional pages
       function emptyPage() {
-        alert("Sorry! This page hasn't been made yet. Try focusing on learning the 3x3 for now!")
+        alert("Sorry! This tutorial isn't done yet. Try focusing on learning the 3x3 for now!")
       }
 
     </script>
@@ -56,25 +59,46 @@ Base code referenced from:
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">✖</a>
       <a onclick="emptyPage()">2x2</a>
-      <a href="#">3x3</a>
+      <a href="#Base Cross">3x3</a>
       <a onclick="emptyPage()">4x4</a>
       <a onclick="emptyPage()">Pyramix</a>
     </div>   
     
     <span style="font-size: 36pt; background-color: #333; color: #8fe456; padding-left: 20; padding-right: 20;" onclick="openNav()">≡</span>
 
-    <button class="accordion">• Base Cross</button>
+    <iframe class="center" width="100%" height="65%" src="https://www.youtube.com/embed/7Ron6MN45LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+    picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+    <button id="Base Cross" class="accordion">• Things to Note</button>
     <div class="panel">
-      <div class="card">
-        <img src="CubeIt_images/CubeIT.JPEG" alt="Avatar" style="width:30%">
+      <div class="card" style="width: 100%;">
+        <img src="CubeIt_images/cube_it_notation.png" alt="Avatar" style="width:100%">
         <div class="container">
-          <h4><b>John Doe</b></h4>
-          <p>Architect & Engineer</p>
+          <h4 style="padding: 10;"><b>Notation</b></h4>
+          <p style="padding: 10;">To get started I recommend you to read the basic cubing terminology and you will need to know the Rubik's Cube notation ie what the letters mean in the algorithms:</p>
+          <p style="padding: 10;">F: front, R: right, U: up, L: left, D: down.</p>
+          <p style="padding: 10;"><strong>Clockwise</strong> rotations have are notated regularly</p>
+          <p style="padding: 10;"><strong>Counterclockwise</strong> rotations are followed with an 'i'</p>
+          <p style="padding: 10;">To keep a record of your solution times try the <a href="https://ruwix.com/online-rubiks-stopwatch-timer/">online Rubik's Cube Timer</a>
+            with many useful features or generate random shuffles for your practice with the <a href="https://ruwix.com/puzzle-scramble-generator/">scramble generator.</a>
+          </p>
         </div>
       </div>
     </div>
     </div>
-    
+
+    <button class="accordion">• Base Cross</button>
+    <div class="panel">
+      <div class="card">
+        <img src="CubeIt_images/cube_it_notation.png" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4 style="padding: 10;"><b>Notation</b></h4>
+          <p style="padding: 10;">To keep a record of your solution times try the <a href="https://ruwix.com/online-rubiks-stopwatch-timer/">online Rubik's Cube Timer</a>
+            with many useful features or generate random shuffles for your practice with the <a href="https://ruwix.com/puzzle-scramble-generator/">scramble generator.</a></p>
+        </div>
+      </div>
+    </div>
+    </div>
 
     <button class="accordion">• First Layer: Corners</button>
     <div class="panel">
@@ -122,27 +146,6 @@ Base code referenced from:
         });
       }
     </script>
-
-    <!-- <button type="button" class="collapsible active" style="font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; 
-          text-align: center;">Stock Ingredients<span class="badge">11</span></button>
-    <div class="content" style="display: block;">
-      <ul class="drop">
-          <li>3lb chicken wings</li><br>
-          <li>2 celery stalks, chopped</li><br>
-          <li>2 carrots, chopped</li><br>
-          <li>1 onion, halved</li><br>
-          <li>1 head garlic, halved</li><br>
-          <li>2 turnips, halved</li><br>
-          <li>Halved ginger</li><br>
-          <li>Parsnips</li><br>
-          <li>Fennel fronds</li><br>
-          <li>Black peppercorns</li><br>
-          <li>Water</li>
-      </ul>
-    </div> -->
-
-    <iframe class="center" width="75%" height="55%" src="https://www.youtube.com/embed/7Ron6MN45LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-    picture-in-picture; web-share" allowfullscreen=""></iframe>
 
   </body>
 
