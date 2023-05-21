@@ -18,10 +18,8 @@ Credits:
 
     <link rel="stylesheet" href="general_style.css">
 
-    
-
     <script>
-      ///////////////////////////// Offcanvas ///////////////////////////////////
+      // Offcanvas functionality
       /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -34,27 +32,71 @@ Credits:
         // document.getElementById("main").style.marginLeft = "0";
       }
 
-      ///////////////////////////// Accordian ///////////////////////////////////
-      // var acc = document.getElementsByClassName("accordion");
-      // var i;
+      // Alert for non-functional pages
+      function emptyPage() {
+        alert("Sorry! This page hasn't been made yet. Try focusing on learning the 3x3 for now!")
+      }
 
-      // for (i = 0; i < acc.length; i++) {
-      //   acc[i].addEventListener("click", function() {
-      //     /* Toggle between adding and removing the "active" class,
-      //     to highlight the button that controls the panel */
-      //     this.classList.toggle("active");
+    </script>
+  </head>
 
-      //     /* Toggle between hiding and showing the active panel */
-      //     var panel = this.nextElementSibling;
-      //     if (panel.style.display === "block") {
-      //       panel.style.display = "none";
-      //     } else {
-      //       panel.style.display = "block";
-      //     }
-      //   });
-      // }
+  <body>
+
+    <nav>
+        <p></p>
+        <a href="cube_it_home.html" class="home-link">Home</a>
+        <a href="cube_it_solve.html" class="home-link">Solve Now!</a>
+        <a href="cube_it_history.html" class="home-link">History</a>
+        <p></p>
+    </nav>
+    
+    <!-- Difine the contents of the Offcanvas then the span that open it up -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">✖</a>
+      <a onclick="emptyPage()">2x2</a>
+      <a href="#">3x3</a>
+      <a onclick="emptyPage()">4x4</a>
+      <a onclick="emptyPage()">Pyramix</a>
+    </div>   
+    
+    <span style="font-size: 36pt; background-color: #333; color: #8fe456; padding-left: 20; padding-right: 20;" onclick="openNav()">≡</span>
+
+    <button class="accordion">• Base Cross</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">• First Layer: Corners</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+
+    <button class="accordion">• Second Layer: Edges</button>
+    <div class="panel">
+      <p>Lorem ipsum...
+      </p>
+    </div>
       
-      // Animate accordian toggle
+    <button class="accordion">• Third Layer: Top Cross</button>
+    <div class="panel">
+      <p>Lorem ipsum...
+      </p>
+    </div>
+
+    <button class="accordion">• Third Layer: Top Corners</button>
+    <div class="panel">
+      <p>Lorem ipsum...
+      </p>
+    </div>
+
+    <button class="accordion">• Third Layer: Top Sides</button>
+    <div class="panel">
+      <p>Lorem ipsum...
+      </p>
+    </div>
+
+    <!-- Accordian script placed in body because accordians need to be declared first before script can work -->
+    <script>
       var acc = document.getElementsByClassName("accordion");
       var i;
 
@@ -68,44 +110,8 @@ Credits:
             panel.style.maxHeight = panel.scrollHeight + "px";
           }
         });
-}
+      }
     </script>
-  </head>
-
-  <body>
-    <nav>
-        <p></p>
-        <a href="cube_it_home.html" class="home-link">Home</a>
-        <a href="cube_it_solve.html" class="home-link">Solve Now!</a>
-        <a href="cube_it_history.html" class="home-link">History</a>
-        <p></p>
-    </nav>
-    
-    <!-- Difine the contents of the Offcanvas then the span that open it up -->
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">✖</a>
-      <a href="#">2x2</a>
-      <a href="#">3x3</a>
-      <a href="#">4x4</a>
-      <a href="#">Pyramix</a>
-    </div>   
-    
-    <span style="font-size: 36pt; background-color: #333; color: #8fe456; padding-left: 20; padding-right: 20;" onclick="openNav()">≡</span>
-
-    <!-- Add the recommended informational video -->
-    <br>
-    <iframe class="center" width="750" height="400" src="https://www.youtube.com/embed/7Ron6MN45LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-    picture-in-picture; web-share" allowfullscreen=""></iframe>
-
-    <button class="accordion">Section 1</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div>
-
-    <button class="accordion">Section 2</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div>
 
     <!-- <button type="button" class="collapsible active" style="font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; 
           text-align: center;">Stock Ingredients<span class="badge">11</span></button>
@@ -125,22 +131,8 @@ Credits:
       </ul>
     </div> -->
 
-    <button class="accordion">Section 3</button>
-    <div class="panel">
-      <p>Lorem ipsum...
-        ttons that are used to open and close the accordion panel */
-.accordion 
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-      </p>
-    </div>
+    <iframe class="center" width="75%" height="55%" src="https://www.youtube.com/embed/7Ron6MN45LY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+    picture-in-picture; web-share" allowfullscreen=""></iframe>
 
   </body>
 

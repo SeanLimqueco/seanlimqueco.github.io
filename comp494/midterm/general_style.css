@@ -4,14 +4,15 @@ background-color: rgb(243, 243, 140);
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #8fe456;
-    overflow: hidden;
-    margin: 0 auto;
-    width: 100%;
-    }
+font-weight: bold;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #8fe456;
+overflow: hidden;
+margin: 0 auto;
+width: 100%;
+}
 
 nav a {
 color: #333;
@@ -43,8 +44,8 @@ align-items: center;
 }
 
 .carousel img {
-width: width="560";
-height: height="500";
+width: "560";
+height: "500";
 }
 
 /********************************* History Page *******************************/
@@ -96,7 +97,7 @@ position: fixed; /* Stay in place */
 z-index: 1; /* Stay on top */
 top: 0;
 left: 0;
-background-color: rgb(143, 228, 86); /* Black*/
+background-color: #333; /* Black*/
 overflow-x: hidden; /* Disable horizontal scroll */
 padding-top: 60px; /* Place content 60px from the top */
 transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -107,15 +108,15 @@ transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 padding: 8px 32px 8px 32px;
 text-decoration: none;
 font-size: 25px;
-color: #333;
+color: #8fe456;
 display: block;
 transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-color: #8fe456;
-background-color: #333;
+color: #333;
+background-color: #8fe456;
 }
 
 /* Position and style the close button (top right corner) */
@@ -138,26 +139,30 @@ padding: 20px;
 .sidenav a {font-size: 18px;}
 }
 
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-background-color: #eee;
+background-color: rgb(243, 243, 140);
 color: #444;
 cursor: pointer;
 padding: 18px;
 width: 100%;
 text-align: left;
 border: none;
-outline: none;
 transition: 0.4s;
+font-size: 24;
+font-weight: bold;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-background-color: #ccc;
+background-color: #333;
+color: rgb(243, 243, 140)
 }
 
 .panel {
-padding: 0 18px;
+padding: 0 18;
+font-size: large;
 background-color: white;
 max-height: 0;
 overflow: hidden;
