@@ -34,8 +34,8 @@ font-size: 24;
 .carousel {
 position: fixed;
 bottom: 0;
-width: 100%;
-height: calc(100vh - 56px); /* subtract height of nav bar */
+width: auto;
+height: auto; /* subtract height of nav bar */
 background-color: rgb(243, 243, 140);
 display: flex;
 justify-content: center;
