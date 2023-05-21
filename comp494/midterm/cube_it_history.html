@@ -13,15 +13,46 @@ Last Date Modified: March 29, 2023
     <meta charset="UTF-8">
     <title>Cube It — Solve</title>
 
-    <link rel="stylesheet" href="general_style.css">
-
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="general_style.css">    
     
   </head>
 
   <body>
+    
+    <div id="myModal" class="modal fade in">
+          <!-- Modal content -->
+          <div id="mymodal" class="modal-content">
+            <span class="close" >×</span>
+            <h1 style="text-align: center;">Disclamer</h1>
+            <p style="font-size: 18pt">The contents of this page originate from the Rubik's Cube Wiki page
+              which you can find <a href="https://en.wikipedia.org/wiki/Rubik%27s_Cube" target="_blank">here</a>.
+              The purpose of this this website is purely to demonstrate technical ability for academic purposes.</p>
+          </div>
+        </div>     
+        
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user opens page, open the modal 
+      window.onload = function() {
+        modal.style.display = "block";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>    
+    
     <nav>
         <p></p>
         <a href="cube_it_home.html" class="home-link">Home</a>
@@ -31,8 +62,8 @@ Last Date Modified: March 29, 2023
         <p></p>
     </nav>
 
-    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
-        <a class="nav-link" href="#scrollspyHeading1">First</a>
+    <nav class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="nav-link" href="#scrollspyHeading1">General History</a>
         <a class="nav-link" href="#scrollspyHeading2">Second</a>
         <a class="nav-link" href="#scrollspyHeading3">Second</a>
         <a class="nav-link" href="#scrollspyHeading4">Second</a>
@@ -40,15 +71,24 @@ Last Date Modified: March 29, 2023
       </nav>
 
     <div data-bs-spy="scroll" data-bs-target="#History" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
-        <h4 id="scrollspyHeading1">First heading</h4>
+        <h2 id="scrollspyHeading1" >General History</h2>
+        <p>The Rubik's Cube is a 3-D combination puzzle originally invented in 1974[2][3] by Hungarian sculptor and professor of architecture Ernő Rubik. Originally called the Magic Cube,[4] the puzzle was licensed by Rubik to be sold by Pentangle Puzzles in the UK in 1978,[5] and then by Ideal Toy Corp in 1980[6] via businessman Tibor Laczi and Seven Towns founder Tom Kremer.[7] The cube was released internationally in 1980 and became one of the most recognized icons in popular culture. It won the 1980 German Game of the Year special award for Best Puzzle. As of January 2009, 350 million cubes had been sold worldwide,[8][9][needs update] making it the world's bestselling puzzle game[10][11] and bestselling toy.[12] The Rubik's Cube was inducted into the US National Toy Hall of Fame in 2014.[13]
+
+          On the original classic Rubik's Cube, each of the six faces was covered by nine stickers, each of one of six solid colours: white, red, blue, orange, green, and yellow. Some later versions of the cube have been updated to use coloured plastic panels instead, which prevents peeling and fading.[14] Since 1988, the arrangement of colours has been standardised with white opposite yellow, blue opposite green, and orange opposite red, and the red, white, and blue arranged clockwise in that order.[15] On early cubes, the position of the colours varied from cube to cube.[16]
+          
+          A salaryman trying to solve a Rubik's cube in an izakaya after work in Japan, 2008.
+          An internal pivot mechanism enables each face to turn independently, thus mixing up the colours. For the puzzle to be solved, each face must be returned to have only one colour. Similar puzzles have now been produced with various numbers of sides, dimensions, and stickers, not all of them by Rubik.
+          
+          Although the Rubik's Cube reached its height of mainstream popularity in the 1980s, it is still widely known and used. Many speedcubers continue to practise it and similar puzzles, and compete for the fastest times in various categories. Since 2003, the World Cube Association, the international governing body of the Rubik's Cube, has organised competitions worldwide and recognises world records.
+          
+          </p>
+        <h2 id="scrollspyHeading2">Second heading</h2>
         <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-        <h4 id="scrollspyHeading2">Second heading</h4>
+        <h2 id="scrollspyHeading3">Third heading</h2>
         <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-        <h4 id="scrollspyHeading3">Third heading</h4>
+        <h2 id="scrollspyHeading4">Fourth heading</h2>
         <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-        <h4 id="scrollspyHeading4">Fourth heading</h4>
-        <p>...<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-        <h4 id="scrollspyHeading5">Fifth heading</h4>
+        <h2 id="scrollspyHeading5">Fifth heading</h2>
         <p>..<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
       </div>
   </body>
