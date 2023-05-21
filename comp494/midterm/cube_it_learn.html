@@ -4,6 +4,9 @@ Author: Sean Limqueco
 
 Last Date Modified: March 29, 2023
 
+Credits:
+  Accordian: https://www.w3schools.com/howto/howto_js_accordion.asp
+
 -->
 
 <DOCTYPE! html>
@@ -13,94 +16,60 @@ Last Date Modified: March 29, 2023
     <meta charset="UTF-8">
     <title>Cube It — Learn</title>
 
+    <link rel="stylesheet" href="general_style.css">
+
     <style>
-        /* CSS styles for navigation bar */
-        nav {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: rgb(143, 228, 86);
-          overflow: hidden;
-          margin: 0 auto;
-          width: 100%;
-        }
-        
-        nav a {
-          color: #333;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-        
-        nav a:hover {
-          background-color: #333;
-          color: #8fe456;
-        }
-  
-        nav a.home-link {
-          font-size: 24;
-        }
+        /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
 
-        .accordion-content {
-          display: none;
-        }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .accordion:hover {
+      background-color: #ccc;
+    }
 
-        .accordion-btn {
-           background-color: #eee;
-            color: #333;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .accordion-btn.active, .accordion-btn:hover {
-          background-color: #ccc;
-        }
-
-        .accordion-btn::after {
-            content: '\02795';
-            font-size: 13px;
-            color: #777;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .accordion-btn.active::after {
-            content: "\2796";
-        }
-
-        .accordion-content {
-            padding: 0 18px;
-            overflow: hidden;
-            background-color: #f1f1f1;
-        }
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+    }
     </style>
 
     <script>
-        var items = document.querySelectorAll('.accordion-item');
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-        items.forEach(function(item) {
-            item.addEventListener('click', function() {
-                if (item.classList.contains('active')) {
-                item.classList.remove('active');
-                } else {
-                items.forEach(function(otherItem) {
-                    otherItem.classList.remove('active');
-                });
-                item.classList.add('active');
-                }
-            });
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          /* Toggle between adding and removing the "active" class,
+          to highlight the button that controls the panel */
+          this.classList.toggle("active");
+
+          /* Toggle between hiding and showing the active panel */
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
         });
+      }
     </script>
   </head>
 
   <body>
 
-    
     <nav>
         <p></p>
         <a href="cube_it_home.html" class="home-link">Home</a>
@@ -110,104 +79,21 @@ Last Date Modified: March 29, 2023
         <p></p>
     </nav>
 
-    <div class="accordion">
-        <div>
-            <button class="accordion-btn">Layer 1: Cross</button>
-            <div class="accordion-content">
-                <div class="card">
-                <img src="image1.jpg" alt="Image 1">
-                <div class="card-body">
-                    <h3>Card Title 1</h3>
-                    <p>Content for card 1 goes here.</p>
-                </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <button class="accordion-btn">Layer 1: Corners</button>
-            <div class="accordion-content">
-            <p>Content for section 2 goes here.</p>
-            </div>
-        </div>
-        
-        <div>
-            <button class="accordion-btn">Layer 2: Edges</button>
-            <div class="accordion-content">
-            <p>Content for section 3 goes here.</p>
-            </div>
-        </div>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
     </div>
 
-
-
-<!--     
-    <div class="accordion">
-        <div class="accordion-item">
-          <div class="accordion-header">
-            Item 1
-          </div>
-          <div class="accordion-content">
-            <p>Content for item 1 goes here.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">
-            Item 2
-          </div>
-          <div class="accordion-content">
-            <p>Content for item 2 goes here.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <div class="accordion-header">
-            Item 3
-          </div>
-          <div class="accordion-content">
-            <p>Content for item 3 goes here.</p>
-          </div>
-        </div>
-      </div> -->
-
-
-    <!-- <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-      </div> -->
   </body>
 
 </html>

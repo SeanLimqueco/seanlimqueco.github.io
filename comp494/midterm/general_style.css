@@ -1,0 +1,42 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(143, 228, 86);
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    }
+
+nav a {
+color: #333;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+nav a:hover {
+background-color: #333;
+color: #8fe456;
+}
+
+nav a.home-link {
+font-size: 24;
+}
+
+/* CSS styles for carousel */ 
+.carousel {
+position: fixed;
+bottom: 0;
+width: 100%;
+height: calc(100vh - 56px); /* subtract height of nav bar */
+background-color: #f2f2f2;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.carousel img {
+width: 100%;
+height: auto;
+}
